@@ -35,3 +35,6 @@ The chip disables all charging and shuts down below 1V per cell (in 3S).
 The charge and discharge FET rise/fall times are configurable with resistors.
 
 We will need to configure load removal as a condition of undervoltage recovery, since our load is large. This means we need a 3.3MOhm resistor as R_{gs_chg}.
+
+We can add RC filters to the current-sensing resistors for stability, sounds like it's not really necessary as our battery is very stable output V.
+
