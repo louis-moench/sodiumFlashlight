@@ -1,12 +1,11 @@
-two potentials ICs:
-BQ25185
-BQ25306
 tutorial https://www.youtube.com/watch?v=6-cEOdpa7dg&list=PLJJ-NKzzRQygLr5ta54anSxbbq5CFP0W2
-the above tutorial uses the bq77915, which may be suitable. have to see if it supports 4V or 4.1V cutoff, and what low voltage threshholds it can do
- - yes it does, can do undervoltage from 1.2 to 3v and overvoltage from 3 to 4.575
-The 77915 supports 3s.
+the above tutorial uses the bq77915, which is not suitable since it only has fixed high/low voltage cutoffs
+instead i will use bq77910(08)
 
-The 77915 also implements active charging.
+The 77905 supports 3s.
+
+The 77905 does not implement active balancing.
+I will have to implement it maybe with a separate portion of the board
 
 The way the 77915 implements overcurrent detection is with some sort of voltage transduction onto a pin, not sure which one.
 
@@ -37,6 +36,8 @@ The charge and discharge FET rise/fall times are configurable with resistors.
 We will need to configure load removal as a condition of undervoltage recovery, since our load is large. This means we need a 3.3MOhm resistor as R_{gs_chg}.
 
 We can add RC filters to the current-sensing resistors for stability, sounds like it's not really necessary as our battery is very stable output V.
+
+we will also have to select thermistors to set the high/low temp thresholds
 
 key electrical parameters:
 3s configuration of 3.7V (2.0-4.0V) sodium-ion cells with 650mA per cell standard discharge current
