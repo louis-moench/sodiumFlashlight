@@ -49,3 +49,7 @@ okay we have to use the bq7790508 instead, this has correct cutoff voltages (ch/
 it goes from 2V to 3.9V
 
 to set OCD and OCC we need to choose resistors that will produce 50mV (OCD1) at our current setting, so since 0.050V = (0.65^2)r we use resistor value of 0.05/(0.65^2) = 0.118Ohm
+OCC value is 60mV so we want 650mA to trigger that so (0.65^2)*r=0.06, r = 0.06/(0.65^2) = 0.142
+
+What FET to use?
+i would like to use a nice one to flex.
