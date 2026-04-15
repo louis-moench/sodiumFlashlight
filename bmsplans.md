@@ -53,3 +53,5 @@ OCC value is 60mV so we want 650mA to trigger that so (0.65^2)*r=0.06, r = 0.06/
 
 What FET to use?
 i would like to use a nice one to flex. but i wont, because that's not cool.
+I'll use some that can deliver 400mA constant current and stop 26A (since these cells can deliver that much at inst. max discharge).
+Maybe i'll use ao3400a FET
