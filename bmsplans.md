@@ -38,3 +38,14 @@ We will need to configure load removal as a condition of undervoltage recovery, 
 
 We can add RC filters to the current-sensing resistors for stability, sounds like it's not really necessary as our battery is very stable output V.
 
+key electrical parameters:
+3s configuration of 3.7V (2.0-4.0V) sodium-ion cells with 650mA per cell standard discharge current
+standard charge current of 650mA
+max charge current of 2.6A
+max discharge current of 13A
+
+
+okay we have to use the bq7790508 instead, this has correct cutoff voltages (ch/disch range)
+it goes from 2V to 3.9V
+
+to set OCD and OCC we need to choose resistors that will produce 50mV (OCD1) at our current setting, so since 0.050V = (0.65^2)r we use resistor value of 0.05/(0.65^2) = 0.118Ohm
