@@ -16,4 +16,4 @@ I'll use some that can deliver 400mA constant current and stop 26A (since these 
 Maybe i'll use ao3400a FET
 
 so, i ultimately decided not to use any TI chip and just do it all with an STM32. It shouldn't be too hard since it's just three cells, overcurrent, overvoltage in charge, undervoltage in discharge
-you have to measure the current in and out of the cells, and the easiest way to do this is with a current sensing resistor for each cell. problem is you need to amplify the voltage drop before handing it to ADC; some methods are to use op amps, or the INA219 from TI that does the whole thing and shoots it over i2c.
+you have to measure the current in and out of the cells, and the easiest way to do this is with a current sensing resistor for each cell. problem is you need to amplify the voltage drop before handing it to ADC; some methods are to use op amps, or the INA219 from TI that does the whole thing and shoots it over i2c. (you need one INA for each measurement...)
